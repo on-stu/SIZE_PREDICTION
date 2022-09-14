@@ -23,7 +23,7 @@ def write_csv(col_names, values, file_path):
             else:
                 file_open.write('\n')
 
-df = pd.read_excel(r'data/8data.xlsx')
+df = pd.read_excel(r'data/8data.xlsx', sheet_name=1)
 
 cols = df.values[5][1:]
 vals = df.values[6:]

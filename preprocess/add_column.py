@@ -1,11 +1,12 @@
+from cmath import nan
 import csv
 
 """
 header의 index
-배꼽수준허리높이 : 19
-허리높이 : 18
-키 : 11
-샅높이 : 22
+배꼽수준허리높이 : 96
+허리높이 : 16
+키 : 83
+샅높이 : 101
 
 전처리해야하는 새로운 필드
 
@@ -89,4 +90,16 @@ def main():
     
 
 
-main()
+# main()
+#find_column_by_name()
+total_error = 0
+
+for row in rows:
+    if type(row[83]) == nan:
+        print('hello')
+    # if row[11] and row[83]:
+    #     print(float(row[11]) - float(row[83]))
+    #     total_error = total_error + abs(float(row[11]) - float(row[83]))
+    #     print(total_error)
+
+print(total_error / len(rows))
